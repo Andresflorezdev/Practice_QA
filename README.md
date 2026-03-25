@@ -1,6 +1,6 @@
 # Practice QA
 
-Proyecto de pruebas automatizadas para la API de Veterinaria usando Jest + TypeScript.
+Proyecto de pruebas automatizadas para API usando Jest + TypeScript.
 
 ## Requisitos
 
