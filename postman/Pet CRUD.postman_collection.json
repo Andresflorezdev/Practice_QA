@@ -1,0 +1,414 @@
+{
+  "info": {
+    "_postman_id": "2517cfce-65b6-4392-a702-2a58f8c6a08b",
+    "name": "Pet CRUD",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47791846"
+  },
+  "item": [
+    {
+      "name": "Create Owner- crear dueño",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Andres\",\r\n  \"email\": \"juan@example.com\",\r\n  \"phone\": \"3001234567\",\r\n  \"address\": \"Calle 123, Medellín\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/owner",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "owner"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-veterinarian",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Dra. María García\",\r\n  \"email\": \"maria@vet.com\",\r\n  \"phone\": \"3009876543\",\r\n  \"specialty\": \"Medicina General\",\r\n  \"licenseNumber\": \"VET12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/veterinarian",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "veterinarian"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-pet",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Firulais\",\r\n  \"species\": \"Perro\",\r\n  \"breed\": \"Labrador\",\r\n  \"age\": 3,\r\n  \"owner\": \"6907bcf1cd2520cc30a6e9ea\",\r\n  \"veterinarian\": \"6907c0bdcd2520cc30a6e9ec\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pet",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-seed",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Firulais\",\r\n  \"species\": \"Perro\",\r\n  \"breed\": \"Labrador\",\r\n  \"age\": 3,\r\n  \"owner\": \"6907bcf1cd2520cc30a6e9ea\",\r\n  \"veterinarian\": \"6907c0bdcd2520cc30a6e9ec\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/seed",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "seed"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar-pet",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/veterinarian",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "veterinarian"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar-Owner",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/owner",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "owner"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pet-exists",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pet/69081b68348495a281295a09/exists",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pet",
+            "69081b68348495a281295a09",
+            "exists"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listar-pet",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Firulais\",\r\n  \"species\": \"Perro\",\r\n  \"breed\": \"Labrador\",\r\n  \"age\": 3,\r\n  \"owner\": \"6907bcf1cd2520cc30a6e9ea\",\r\n  \"veterinarian\": \"6907c0bdcd2520cc30a6e9ec\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/pet",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch-Owner",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Juanfer Fernandez\",\r\n  \"email\": \"juan@example.com\",\r\n  \"phone\": \"300123456\",\r\n  \"address\": \"Calle 123, medellin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/owner?id=69c3f5f644f2047df0ee22ee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "owner"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "69c3f5f644f2047df0ee22ee"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch-pat",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Roqui\",\r\n  \"species\": \"Perro\",\r\n  \"breed\": \"Labrador\",\r\n  \"age\": 3,\r\n  \"owner\": \"507f1f77bcf86cd799439011\",\r\n  \"veterinarian\": \"507f1f77bcf86cd799439012\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pet?id=69c3f5f644f2047df0ee2303",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pet"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "69c3f5f644f2047df0ee2303"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Patch-Veterinarian",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Dra. Maria Garcia\",\r\n  \"email\": \"maria.garcia@vet.com\",\r\n  \"phone\": \"3254281993\",\r\n  \"specialty\": \"Medicina General\",\r\n  \"licenseNumber\": \"VET12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/veterinarian?id=69c3f5f644f2047df0ee22fa",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "veterinarian"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "69c3f5f644f2047df0ee22fa"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete-Owner",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/owner?owner=69c412b2b6b8db4dad6bfeaa",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "owner"
+          ],
+          "query": [
+            {
+              "key": "owner",
+              "value": "69c412b2b6b8db4dad6bfeaa"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete-Pet",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pet?pet=69c3f5f644f2047df0ee2300",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pet"
+          ],
+          "query": [
+            {
+              "key": "pet",
+              "value": "69c3f5f644f2047df0ee2300"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete-veterinarian",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/veterinarian?veterinarian=69c3f5f644f2047df0ee22f7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "veterinarian"
+          ],
+          "query": [
+            {
+              "key": "veterinarian",
+              "value": "69c3f5f644f2047df0ee22f7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
